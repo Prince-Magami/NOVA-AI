@@ -1,5 +1,5 @@
 fastapi
-httpx
-cohere
 uvicorn
+cohere
+httpx
 python-dotenv
