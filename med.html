@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Assistant | AI Hackathon Project</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="icon" href="assets/logo.png" type="image/png"/>
+</head>
+<body>
+  <!-- 🌐 Navbar -->
+  <nav class="navbar">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chat.html">Chat</a></li>
+      <li><a href="edu.html">Education</a></li>
+      <li><a href="med.html" class="active">Medical</a></li>
+      <li><a href="fin.html">Finance</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏥 Medical Assistant -->
+  <section class="edu-section fade-in">
+    <div class="container">
+      <h1 class="section-title">🩺 Medical Assistant</h1>
+      <p class="section-subtext">Ask anything related to symptoms, health advice, wellness, and first aid. No diagnosis or prescriptions.</p>
+
+      <div class="mode-card">
+        <label for="med-language">Language:</label>
+        <select id="med-language">
+          <option value="english">English</option>
+          <option value="pidgin">Pidgin English</option>
+          <option value="hausa">Hausa</option>
+          <option value="yoruba">Yoruba</option>
+        </select>
+
+        <textarea id="med-input" rows="6" placeholder="E.g., What are the symptoms of malaria? How to handle a burn at home?"></textarea>
+        
+        <button id="med-submit">Ask Now</button>
+      </div>
+
+      <div id="med-output" class="output-box typing-animation"></div>
+    </div>
+  </section>
+
+  <!-- 🔚 Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 AI Hackathon Project. Health support only — not a substitute for a doctor.</p>
+  </footer>
+
+  <script src="js/typing.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
