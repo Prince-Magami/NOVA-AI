@@ -1,0 +1,23 @@
+/* chat.css - Chat Interface Specific Styles */
+
+#chat-box {
+  border: 1px solid #1f2937;
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+}
+
+#user-input {
+  border: 1px solid #334155;
+  outline: none;
+  transition: all 0.2s;
+}
+
+#user-input:focus {
+  border-color: #06b6d4;
+  background-color: #1f2937;
+}
+
+button#send-btn:hover {
+  box-shadow: 0 0 10px #22d3ee;
+  transform: scale(1.02);
+}
