@@ -1,54 +1,54 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NOVA AI – Home</title>
-  <link rel="stylesheet" href="css/index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA AI - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="bg-gray-900 text-white font-sans">
 
-<body>
-  <header>
-    <div class="logo">🚀 NOVA AI</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="edu.html">Education</a></li>
-        <li><a href="med.html">Health</a></li>
-        <li><a href="fin.html">Finance</a></li>
-        <li><a href="chat.html">Chat</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- 🔷 Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-800">
+    <h1 class="text-2xl font-bold">NOVA AI</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+      <li><a href="chat.html" class="hover:text-cyan-400">Chat</a></li>
+      <li><a href="health.html" class="hover:text-cyan-400">Health</a></li>
+      <li><a href="education.html" class="hover:text-cyan-400">Education</a></li>
+      <li><a href="finance.html" class="hover:text-cyan-400">Finance</a></li>
+    </ul>
+  </nav>
 
-  <section class="hero">
-    <h1>Welcome to NOVA AI</h1>
-    <p>Your All-in-One Smart Assistant for Education, Healthcare, and Financial Empowerment.</p>
-    <a href="edu.html" class="cta">Explore Now</a>
+  <!-- 🔷 Hero Section -->
+  <section class="text-center py-20 px-6">
+    <h2 class="text-4xl font-bold mb-4">Welcome to NOVA AI</h2>
+    <p class="text-lg text-gray-300 mb-6">Your futuristic multi-intelligence AI assistant for students, health, finance and beyond.</p>
+    <a href="chat.html" class="bg-cyan-500 px-6 py-3 rounded-full text-white hover:bg-cyan-400 transition">Try Now</a>
   </section>
 
-  <section class="features">
-    <div class="card">
-      <h2>📚 Education</h2>
-      <p>Smart tutoring, translation, and exam help for students at all levels.</p>
-      <a href="edu.html">Enter</a>
+  <!-- 🔷 Features Preview -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-10">
+    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">💊 MediSeal</h3>
+      <p class="text-gray-400">Scan symptoms & translate prescriptions instantly.</p>
     </div>
-    <div class="card">
-      <h2>🩺 Health</h2>
-      <p>Symptom checker, prescription translator, and wellness tips at your fingertips.</p>
-      <a href="med.html">Enter</a>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">🎓 EduHack</h3>
+      <p class="text-gray-400">Study smarter with AI-powered academic tools.</p>
     </div>
-    <div class="card">
-      <h2>💰 Finance</h2>
-      <p>Understand savings, investments, and access financial tools in seconds.</p>
-      <a href="fin.html">Enter</a>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">💼 TailorAI</h3>
+      <p class="text-gray-400">Plan your finances and discover career paths.</p>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 NOVA AI. Built for the Hackathon.</p>
+  <!-- 🔷 Footer -->
+  <footer class="text-center py-4 text-gray-500 text-sm">
+    &copy; 2025 NOVA AI. Built for the future.
   </footer>
-</body>
 
+</body>
 </html>
