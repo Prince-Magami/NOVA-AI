@@ -1,40 +1,42 @@
+<!-- education.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduHack - Future of Learning</title>
-  <link rel="stylesheet" href="edu.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA AI - Education</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <h1>EduHack</h1>
-    <p>Revolutionizing Education with AI + Language + Inclusion</p>
-  </header>
+<body class="bg-gray-900 text-white font-sans">
 
-  <main>
-    <section class="feature">
-      <h2>📚 Real-Time AI Tutor</h2>
-      <p>Ask questions, get instant, personalized answers in any language you prefer. Supports text, voice, and even simplified summaries for learners with different abilities.</p>
-    </section>
+  <!-- 🔷 Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-800">
+    <h1 class="text-2xl font-bold">NOVA AI</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+      <li><a href="chat.html" class="hover:text-cyan-400">Chat</a></li>
+      <li><a href="health.html" class="hover:text-cyan-400">Health</a></li>
+      <li><a href="education.html" class="text-cyan-400 font-semibold">Education</a></li>
+      <li><a href="finance.html" class="hover:text-cyan-400">Finance</a></li>
+    </ul>
+  </nav>
 
-    <section class="feature">
-      <h2>🗣️ EduTranslate</h2>
-      <p>Translate educational material, lectures, or live sessions in real time using local dialects or global languages.</p>
-    </section>
+  <!-- 🔷 EduHack Tools -->
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">📚 EduHack — Smart Student Tools</h2>
 
-    <section class="feature">
-      <h2>🔊 Accessibility First</h2>
-      <p>Audio-based Q&A, text-to-speech for visually impaired students, and simplified AI explanations for younger or beginner learners.</p>
-    </section>
+    <!-- AI Topic Search -->
+    <div class="mb-6 bg-gray-800 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-2">🔍 Search a Topic</h3>
+      <input type="text" placeholder="e.g., Photosynthesis, Pythagoras..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
+      <button class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Get Summary</button>
+      <div class="mt-4 text-gray-300"></div>
+    </div>
 
-    <section class="cta">
-      <a href="chat.html">Try the AI Tutor</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 EduHack Initiative – Powered by 3MTT</p>
-  </footer>
-</body>
-</html>
+    <!-- Quiz Generator -->
+    <div class="bg-gray-800 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-2">📝 Generate Quiz</h3>
+      <input type="text" placeholder="Enter topic..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
+      <button class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Create Quiz</button>
+      <div class
