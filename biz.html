@@ -1,40 +1,37 @@
+<!-- finance.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BizGuide - AI for Business Growth</title>
-  <link rel="stylesheet" href="biz.css" />
+  <title>NOVA AI - Finance</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <h1>BizGuide</h1>
-    <p>Helping Nigerian Entrepreneurs Thrive with Smart Tools</p>
-  </header>
+<body class="bg-gray-900 text-white font-sans">
 
-  <main>
-    <section class="feature">
-      <h2>📈 Local Business Ideas</h2>
-      <p>AI suggests practical and profitable business ideas based on your environment, skills, and budget.</p>
-    </section>
+  <!-- 🔷 Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-800">
+    <h1 class="text-2xl font-bold">NOVA AI</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+      <li><a href="chat.html" class="hover:text-cyan-400">Chat</a></li>
+      <li><a href="health.html" class="hover:text-cyan-400">Health</a></li>
+      <li><a href="education.html" class="hover:text-cyan-400">Education</a></li>
+      <li><a href="finance.html" class="text-cyan-400 font-semibold">Finance</a></li>
+    </ul>
+  </nav>
 
-    <section class="feature">
-      <h2>🧾 Financial Advice in Simple Terms</h2>
-      <p>Learn how to save, price, market, and reinvest in your small business using everyday Nigerian language.</p>
-    </section>
+  <!-- 🔷 Finance Assistant -->
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">💼 TailorAI — Finance & Career Tools</h2>
 
-    <section class="feature">
-      <h2>🛒 Market Strategies & Branding</h2>
-      <p>Get marketing tips, product packaging advice, and name suggestions to attract more customers.</p>
-    </section>
+    <!-- Budget Planner -->
+    <div class="mb-6 bg-gray-800 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-2">💸 Budget Planner</h3>
+      <input type="text" placeholder="Describe your monthly income and expenses..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
+      <button class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Generate Plan</button>
+      <div class="mt-4 text-gray-300"></div>
+    </div>
 
-    <section class="cta">
-      <a href="chat.html">Try Business Coach</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 BizGuide AI – Powered by 3MTT Innovation</p>
-  </footer>
-</body>
-</html>
+    <!-- Career Matche
