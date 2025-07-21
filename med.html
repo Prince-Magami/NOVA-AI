@@ -1,40 +1,32 @@
+<!-- health.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MediBridge - AI for Health</title>
-  <link rel="stylesheet" href="med.css" />
+  <title>NOVA AI - Health</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <h1>MediBridge</h1>
-    <p>Connecting Communities to Smarter, Safer Healthcare</p>
-  </header>
+<body class="bg-gray-900 text-white font-sans">
 
-  <main>
-    <section class="feature">
-      <h2>🩺 Instant Symptom Checker</h2>
-      <p>Describe how you feel in any language. Get quick, AI-powered health advice and direction to verified clinics near you.</p>
-    </section>
+  <!-- 🔷 Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-800">
+    <h1 class="text-2xl font-bold">NOVA AI</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+      <li><a href="chat.html" class="hover:text-cyan-400">Chat</a></li>
+      <li><a href="health.html" class="text-cyan-400 font-semibold">Health</a></li>
+      <li><a href="education.html" class="hover:text-cyan-400">Education</a></li>
+      <li><a href="finance.html" class="hover:text-cyan-400">Finance</a></li>
+    </ul>
+  </nav>
 
-    <section class="feature">
-      <h2>💬 Local Language Support</h2>
-      <p>Health terms explained in Hausa, Yoruba, Igbo, and Pidgin. Designed to help everyone understand their health better.</p>
-    </section>
+  <!-- 🔷 Health Tools -->
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">💊 Medical Assistant Tools</h2>
 
-    <section class="feature">
-      <h2>🚑 Emergency Assistant</h2>
-      <p>Voice-activated help for elderly or non-literate users. Quick suggestions while waiting for professional care.</p>
-    </section>
-
-    <section class="cta">
-      <a href="chat.html">Use Health AI</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 MediBridge AI – Empowered by 3MTT</p>
-  </footer>
-</body>
-</html>
+    <!-- Symptom Checker -->
+    <div class="mb-6 bg-gray-800 p-4 rounded-lg">
+      <h3 class="text-xl font-semibold mb-2">🧬 Symptom Checker</h3>
+      <input type="text" id="symptom-input" placeholder="Describe your symptoms...
