@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA AI – Welcome</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen font-sans">
+
+  <!-- 🔷 Navbar -->
+  <header class="w-full py-6 px-8 flex justify-between items-center bg-gray-900 shadow-lg">
+    <h1 class="text-3xl font-bold text-cyan-400 tracking-wider">NOVA<span class="text-white">AI</span></h1>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#modes" class="hover:text-cyan-400">Modes</a>
+      <a href="#about" class="hover:text-cyan-400">About</a>
+      <a href="#contact" class="hover:text-cyan-400">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 🔷 Hero Section -->
+  <section class="text-center py-20 px-6">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to <span class="text-cyan-400">NOVA AI</span></h2>
+    <p class="text-gray-300 max-w-xl mx-auto text-lg">
+      Your all-in-one smart assistant for <span class="text-cyan-300">Education</span>, <span class="text-cyan-300">Health</span> & <span class="text-cyan-300">Financial Guidance</span>.
+    </p>
+  </section>
+
+  <!-- 🔷 Mode Cards -->
+  <section id="modes" class="py-16 px-8 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <!-- EduHack -->
+    <a href="edu.html" class="bg-gray-800 p-8 rounded-2xl hover:bg-cyan-500 transition duration-300 group shadow-lg">
+      <h3 class="text-2xl font-semibold mb-4 group-hover:text-white">🎓 EduHack</h3>
+      <p class="text-gray-400 group-hover:text-white">
+        Ask questions, get explanations, academic help in English & Nigerian languages.
+      </p>
+    </a>
+
+    <!-- MediSeal + MedTranslate -->
+    <a href="med.html" class="bg-gray-800 p-8 rounded-2xl hover:bg-emerald-500 transition duration-300 group shadow-lg">
+      <h3 class="text-2xl font-semibold mb-4 group-hover:text-white">💊 MediSeal + MedTranslate</h3>
+      <p class="text-gray-400 group-hover:text-white">
+        Translate prescriptions & get health advice tailored for Nigerians.
+      </p>
+    </a>
+
+    <!-- TailorAI (Career & Finance) -->
+    <a href="fin.html" class="bg-gray-800 p-8 rounded-2xl hover:bg-yellow-500 transition duration-300 group shadow-lg">
+      <h3 class="text-2xl font-semibold mb-4 group-hover:text-black">💼 TailorAI</h3>
+      <p class="text-gray-400 group-hover:text-black">
+        Smart financial & career planning assistant for youths & hustlers.
+      </p>
+    </a>
+  </section>
+
+  <!-- 🔷 About Section -->
+  <section id="about" class="py-20 px-6 text-center bg-gray-900">
+    <h4 class="text-3xl font-bold mb-6 text-cyan-300">Why NOVA AI?</h4>
+    <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+      Built for impact — NOVA AI merges Education, Healthcare, and Financial Empowerment into one free, easy-to-use assistant for the Nigerian community and beyond.
+    </p>
+  </section>
+
+  <!-- 🔷 Footer -->
+  <footer id="contact" class="py-6 px-8 text-center bg-gray-800 text-gray-400 text-sm">
+    Made with 💡 for the Hackathon • NOVA AI © 2025
+  </footer>
+
+</body>
+</html>
