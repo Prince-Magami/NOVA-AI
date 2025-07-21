@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Assistant | AI Hackathon Project</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="icon" href="assets/logo.png" type="image/png"/>
+</head>
+<body>
+  <!-- 🌐 Navbar -->
+  <nav class="navbar">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chat.html">Chat</a></li>
+      <li><a href="edu.html">Education</a></li>
+      <li><a href="med.html">Medical</a></li>
+      <li><a href="fin.html" class="active">Finance</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- 💼 Finance Assistant -->
+  <section class="edu-section fade-in">
+    <div class="container">
+      <h1 class="section-title">💼 Finance & Business Assistant</h1>
+      <p class="section-subtext">Get ideas for small businesses, local trade tips, budgeting help, and digital marketing advice!</p>
+
+      <div class="mode-card">
+        <label for="fin-language">Language:</label>
+        <select id="fin-language">
+          <option value="english">English</option>
+          <option value="pidgin">Pidgin English</option>
+          <option value="hausa">Hausa</option>
+          <option value="yoruba">Yoruba</option>
+        </select>
+
+        <textarea id="fin-input" rows="6" placeholder="E.g., Best business to start in Nigeria with 50k? How to market on WhatsApp?"></textarea>
+        
+        <button id="fin-submit">Ask Now</button>
+      </div>
+
+      <div id="fin-output" class="output-box typing-animation"></div>
+    </div>
+  </section>
+
+  <!-- 🔚 Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 AI Hackathon Project. Built with purpose for real impact.</p>
+  </footer>
+
+  <script src="js/typing.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
