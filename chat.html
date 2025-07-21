@@ -1,0 +1,44 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA AI - Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- 🔷 Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-gray-800">
+    <h1 class="text-2xl font-bold">NOVA AI</h1>
+    <ul class="flex space-x-4">
+      <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+      <li><a href="chat.html" class="text-cyan-400 font-semibold">Chat</a></li>
+      <li><a href="health.html" class="hover:text-cyan-400">Health</a></li>
+      <li><a href="education.html" class="hover:text-cyan-400">Education</a></li>
+      <li><a href="finance.html" class="hover:text-cyan-400">Finance</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🔷 Chat Interface -->
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">💬 NOVA Chat Interface</h2>
+
+    <div id="chat-box" class="h-96 bg-gray-800 rounded-lg p-4 overflow-y-scroll mb-4">
+      <!-- Chat messages will appear here -->
+    </div>
+
+    <div class="flex gap-4">
+      <input id="user-input" type="text" placeholder="Ask NOVA AI anything..." class="flex-1 p-3 rounded bg-gray-700 text-white placeholder-gray-400"/>
+      <button id="send-btn" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Send</button>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-gray-500 text-sm">
+    &copy; 2025 NOVA AI. Powered by smart thinking.
+  </footer>
+
+</body>
+</html>
