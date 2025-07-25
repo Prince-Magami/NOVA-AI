@@ -2,26 +2,58 @@
 
 body {
   background: radial-gradient(circle at top, #0f172a, #000000);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* Hero Heading */
 h2 {
   @apply text-cyan-400;
 }
 
-a {
-  transition: all 0.3s ease-in-out;
+/* Section Titles */
+h3 {
+  @apply text-white text-3xl font-bold mb-4;
 }
 
-a:hover {
-  transform: scale(1.05);
-}
-
+/* Section Fade Animation */
 section {
   animation: fadeIn 1.2s ease-in-out;
 }
 
-.shadow-md {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+/* Hover Links */
+a {
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  transform: scale(1.05);
+}
+
+/* Button Glow */
+a.bg-cyan-500 {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+a.bg-cyan-500:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Card Effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+.hover\:ring-2:hover {
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+/* Smooth card transitions */
+.shadow-md, .hover\:shadow-2xl {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #334155;
+  font-size: 0.85rem;
 }
 
 /* Fade-in animation */
@@ -33,5 +65,17 @@ section {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 640px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  section {
+    padding: 2rem 1rem;
   }
 }
