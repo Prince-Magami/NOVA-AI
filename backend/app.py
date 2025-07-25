@@ -28,5 +28,18 @@ app.include_router(edu_router, prefix="/education", tags=["Education"])
 app.include_router(language_router, prefix="/language", tags=["Language"])
 
 @app.get("/")
-def home():
-    return {"message": "🌍 Nova AI Backend is alive"}
+def root():
+    return {"message": "NOVA API is live"}
+
+@app.post("/")
+async def handle_post(request: Request):
+    data = await request.json()
+    prompt = data.get("prompt", "")
+    
+    # You can import and call your AI function here, e.g.:
+    from utils.helpers import call_gemini_api
+    try:
+        response = call_gemini_api(prompt)
+        return {"response": response}
+    except Exception as e:
+        return {"response": f"[ERROR] {str(e)}"}
