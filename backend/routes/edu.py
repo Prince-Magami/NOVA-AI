@@ -1,6 +1,6 @@
 # backend/routes/education.py
 from fastapi import APIRouter, Request
-from utils.helpers import fetch_summary, generate_quiz, scan_link_with_virustotal
+#from utils.helpers import fetch_summary, generate_quiz, scan_link_with_virustotal
 
 router = APIRouter()
 
