@@ -23,10 +23,53 @@
   </nav>
 
   <!-- 🔷 Health Tools -->
-  <section class="p-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">💊 Medical Assistant Tools</h2>
+  <section class="p-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">🩺 NOVA Health Assistant</h2>
 
-    <!-- Symptom Checker -->
-    <div class="mb-6 bg-gray-800 p-4 rounded-lg">
+    <!-- 🧬 Symptom Checker -->
+    <div class="mb-8 bg-gray-800 p-6 rounded-lg shadow-md">
       <h3 class="text-xl font-semibold mb-2">🧬 Symptom Checker</h3>
-      <input type="text" id="symptom-input" placeholder="Describe your symptoms...
+      <input id="symptom-input" type="text" placeholder="Describe your symptoms..." class="w-full p-3 rounded bg-gray-700 mb-3"/>
+      <button id="symptom-btn" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Analyze Symptoms</button>
+      <div id="symptom-result" class="mt-4 text-gray-300 whitespace-pre-wrap"></div>
+    </div>
+
+    <!-- 🌍 Voice Translator -->
+    <div class="mb-8 bg-gray-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">🌍 Voice Translator (Patient ↔ Doctor)</h3>
+      <div class="flex flex-col sm:flex-row gap-4 mb-3">
+        <select id="source-lang" class="bg-gray-700 p-2 rounded w-full sm:w-1/2">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+          <option value="pcm">Pidgin</option>
+        </select>
+        <select id="target-lang" class="bg-gray-700 p-2 rounded w-full sm:w-1/2">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+          <option value="pcm">Pidgin</option>
+        </select>
+      </div>
+      <button id="voice-translate-btn" class="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-300 transition">🎤 Speak & Translate</button>
+      <div id="translated-result" class="mt-4 text-gray-300 whitespace-pre-wrap italic"></div>
+    </div>
+
+    <!-- 💬 Health Chat Interface (Optional) -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">💬 Ask Medical Questions</h3>
+      <input id="health-chat-input" type="text" placeholder="Type a medical question..." class="w-full p-3 rounded bg-gray-700 mb-3"/>
+      <button id="health-chat-btn" class="bg-green-500 px-6 py-2 rounded hover:bg-green-400 transition">Ask AI</button>
+      <div id="health-chat-output" class="mt-4 text-gray-300 whitespace-pre-wrap"></div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-gray-500 text-sm">
+    &copy; 2025 NOVA AI. Your health, empowered by AI.
+  </footer>
+
+  <script src="./js/health.js"></script>
+</body>
+</html>
