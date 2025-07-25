@@ -1,15 +1,16 @@
-# backend/app.py
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
-import os
-from routes import chat, finance, health, education, language
 
-load_dotenv()
+# Explicit module imports
+from routes.chat import router as chat_router
+from routes.finance import router as finance_router
+from routes.health import router as health_router
+from routes.education import router as education_router
+from routes.language import router as language_router
 
 app = FastAPI()
 
-# CORS config
+# CORS for frontend communication
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -18,13 +19,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount routes
-app.include_router(chat.router, prefix="/api/chat")
-app.include_router(finance.router, prefix="/api/finance")
-app.include_router(health.router, prefix="/api/health")
-app.include_router(education.router, prefix="/api/edu")
-app.include_router(language.router, prefix="/api/lang")
+# Include routes
+app.include_router(chat_router, prefix="/chat", tags=["Chat"])
+app.include_router(finance_router, prefix="/finance", tags=["Finance"])
+app.include_router(health_router, prefix="/health", tags=["Health"])
+app.include_router(education_router, prefix="/education", tags=["Education"])
+app.include_router(language_router, prefix="/language", tags=["Language"])
 
 @app.get("/")
-def read_root():
-    return {"status": "🚀 NOVA AI Backend is Running!"}
+def home():
+    return {"message": "🌍 Nova AI Backend is alive"}
