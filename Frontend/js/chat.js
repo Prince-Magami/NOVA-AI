@@ -28,7 +28,7 @@ async function sendMessage() {
   input.value = '';
 
   try {
-    const res = await fetch('https://nova-backend.onrender.com/api/chat', {
+    const res = await fetch('https://nova-ai-5-sku5.onrender.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message })
