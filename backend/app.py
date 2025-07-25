@@ -1,19 +1,17 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# Explicit module imports
 from backend.routes.chat import router as chat_router
 from backend.routes.edu import router as edu_router
 from backend.routes.finance import router as finance_router
 from backend.routes.health import router as health_router
 from backend.routes.language import router as language_router
 
-
 from backend.utils.helpers import ask_gemini, generate_summary
 
 app = FastAPI()
 
-# CORS for frontend communication
+# CORS config
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -22,11 +20,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routes
+# Include routers correctly
 app.include_router(chat_router, prefix="/chat", tags=["Chat"])
 app.include_router(finance_router, prefix="/finance", tags=["Finance"])
 app.include_router(health_router, prefix="/health", tags=["Health"])
-app.include_router(education_router, prefix="/education", tags=["Education"])
+app.include_router(edu_router, prefix="/education", tags=["Education"])
 app.include_router(language_router, prefix="/language", tags=["Language"])
 
 @app.get("/")
