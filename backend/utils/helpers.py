@@ -114,3 +114,5 @@ def map_language_code(lang):
 # Aliases for external use
 fetch_summary = generate_summary
 scan_link_with_virustotal = scan_virustotal
+
+ask_gemini = call_gemini_api
