@@ -26,17 +26,35 @@
   <section class="p-6 max-w-4xl mx-auto">
     <h2 class="text-3xl font-bold mb-6 text-center">📚 EduHack — Smart Student Tools</h2>
 
-    <!-- AI Topic Search -->
-    <div class="mb-6 bg-gray-800 p-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-2">🔍 Search a Topic</h3>
-      <input type="text" placeholder="e.g., Photosynthesis, Pythagoras..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
-      <button class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Get Summary</button>
-      <div class="mt-4 text-gray-300"></div>
+    <!-- 🔍 AI Topic Summary -->
+    <div class="mb-8 bg-gray-800 p-5 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">🔍 Instant Topic Summary</h3>
+      <input type="text" id="edu-topic" placeholder="e.g., Newton’s Law, French Revolution..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
+      <button id="summary-btn" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Get Summary</button>
+      <div id="summary-result" class="mt-4 text-gray-300"></div>
     </div>
 
-    <!-- Quiz Generator -->
-    <div class="bg-gray-800 p-4 rounded-lg">
-      <h3 class="text-xl font-semibold mb-2">📝 Generate Quiz</h3>
-      <input type="text" placeholder="Enter topic..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
-      <button class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Create Quiz</button>
-      <div class
+    <!-- 🧠 Quiz Generator -->
+    <div class="mb-8 bg-gray-800 p-5 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">📝 Generate Quiz From Topic</h3>
+      <input type="text" id="quiz-topic" placeholder="e.g., Algebra, Climate Change..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
+      <button id="quiz-btn" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Create Quiz</button>
+      <div id="quiz-result" class="mt-4 text-gray-300 whitespace-pre-line"></div>
+    </div>
+
+    <!-- 🔒 ZeroClick Threat Analyzer (Preview) -->
+    <div class="bg-gray-800 p-5 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-2">🛡️ ZeroClick Analyzer (Prototype)</h3>
+      <input type="text" id="zeroclick-url" placeholder="Paste a suspicious link or email content..." class="w-full p-3 bg-gray-700 rounded mb-3"/>
+      <button id="zeroclick-btn" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-400 transition">Scan for Threats</button>
+      <div id="zeroclick-result" class="mt-4 text-gray-300"></div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-gray-500 text-sm">
+    &copy; 2025 NOVA AI. Revolutionizing learning.
+  </footer>
+
+  <script src="./js/edu.js"></script>
+</body>
+</html>
