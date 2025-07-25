@@ -27,12 +27,17 @@ async function sendMessage() {
   addMessage(message, true);
   input.value = '';
 
-  try {
-    const res = await fetch('https://nova-ai-5-sku5.onrender.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message })
-    });
+ fetch("https://nova-ai-5-sku5.onrender.com", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ prompt: userInput })
+})
+.then(res => res.json())
+.then(data => {
+  console.log("AI says:", data.response);
+});
 
     const data = await res.json();
     addMessage(data.reply || '⚠️ Sorry, I couldn’t process that.', false);
