@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.routes.chat import router as chat_router
-from backend.routes.edu import router as edu_router
-from backend.routes.finance import router as finance_router
-from backend.routes.health import router as health_router
-from backend.routes.language import router as language_router
+from routes.chat import router as chat_router
+from routes.edu import router as edu_router
+from routes.finance import router as finance_router
+from routes.health import router as health_router
+from routes.language import router as language_router
+from utils.helpers import ask_gemini, generate_summary
 
-from backend.utils.helpers import ask_gemini, generate_summary
 
 app = FastAPI()
 
