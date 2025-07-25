@@ -20,32 +20,32 @@ function addMessage(text, isUser = true) {
 }
 
 // 🚀 Send to Gemini API (Backend Proxy)
+const backendUrl = "https://nova-ai-5-sku5.onrender.com/"; 
+
 async function sendMessage() {
-  const message = input.value.trim();
-  if (!message) return;
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
+    if (!message) return;
 
-  addMessage(message, true);
-  input.value = '';
+    addMessage(message, "user");
+    input.value = "";
 
- fetch("https://nova-ai-5-sku5.onrender.com", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({ prompt: userInput })
-})
-.then(res => res.json())
-.then(data => {
-  console.log("AI says:", data.response);
-});
+    try {
+        const res = await fetch(backendUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ prompt: message }),
+        });
 
-    const data = await res.json();
-    addMessage(data.reply || '⚠️ Sorry, I couldn’t process that.', false);
-  } catch (err) {
-    console.error('❌ API Error:', err);
-    addMessage('⚠️ Error reaching NOVA backend.', false);
-  }
+        const data = await res.json();
+        addMessage(data.response || "[No response received]", "bot");
+    } catch (err) {
+        addMessage("[Server Error] " + err.message, "bot");
+    }
 }
+
 
 // 🧠 Event Listeners
 sendBtn.addEventListener('click', sendMessage);
