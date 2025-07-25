@@ -1,11 +1,14 @@
 // edu.js - EduHack AI Tools
 
-const topicInput = document.querySelectorAll('input')[0];
-const quizInput = document.querySelectorAll('input')[1];
-const summaryBox = document.querySelectorAll('div')[1];
-const quizBox = document.querySelectorAll('div')[3];
+const topicInput = document.getElementById('edu-topic');
+const quizInput = document.getElementById('quiz-topic');
+const zeroclickInput = document.getElementById('zeroclick-url');
 
-document.querySelectorAll('button')[0].onclick = async () => {
+const summaryBox = document.getElementById('summary-result');
+const quizBox = document.getElementById('quiz-result');
+const zeroclickBox = document.getElementById('zeroclick-result');
+
+document.getElementById('summary-btn').onclick = async () => {
   const topic = topicInput.value.trim();
   if (!topic) return;
 
@@ -25,7 +28,7 @@ document.querySelectorAll('button')[0].onclick = async () => {
   }
 };
 
-document.querySelectorAll('button')[1].onclick = async () => {
+document.getElementById('quiz-btn').onclick = async () => {
   const quizTopic = quizInput.value.trim();
   if (!quizTopic) return;
 
@@ -41,6 +44,26 @@ document.querySelectorAll('button')[1].onclick = async () => {
     quizBox.textContent = data.quiz || 'No quiz found.';
   } catch (err) {
     quizBox.textContent = 'Error generating quiz.';
+    console.error(err);
+  }
+};
+
+document.getElementById('zeroclick-btn').onclick = async () => {
+  const url = zeroclickInput.value.trim();
+  if (!url) return;
+
+  zeroclickBox.textContent = '🛡️ Scanning link for threats...';
+
+  try {
+    const res = await fetch('https://nova-backend.onrender.com/api/edu/zeroclick', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url })
+    });
+    const data = await res.json();
+    zeroclickBox.textContent = data.analysis || 'No threats found.';
+  } catch (err) {
+    zeroclickBox.textContent = 'Error analyzing link.';
     console.error(err);
   }
 };
