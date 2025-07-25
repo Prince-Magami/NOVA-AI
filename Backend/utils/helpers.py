@@ -1,4 +1,3 @@
-# utils/helpers.py
 import os
 import requests
 from dotenv import load_dotenv
@@ -12,8 +11,8 @@ career_api = os.getenv("CAREER_API")
 translator_api = os.getenv("TRANSLATOR_API")
 health_api = os.getenv("HEALTH_API")
 
-# 🌐 Generic Gemini API function
-def ask_gemini(prompt):
+# 🌐 Generic Gemini API function (renamed from ask_gemini)
+def call_gemini_api(prompt):
     try:
         res = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
@@ -30,42 +29,35 @@ def ask_gemini(prompt):
     except Exception as e:
         return f"[Gemini Error] {str(e)}"
 
-
 # 📊 Budget Planner Prompt
 def generate_budget_plan(budget):
     prompt = f"You're a financial assistant. Help plan this budget: {budget}"
-    return ask_gemini(prompt)
-
+    return call_gemini_api(prompt)
 
 # 🧠 Career Match AI
 def suggest_careers(interests):
     prompt = f"Suggest realistic job paths for someone interested in: {interests}"
-    return ask_gemini(prompt)
-
+    return call_gemini_api(prompt)
 
 # 🧬 Symptom Analysis AI
 def analyze_symptoms(symptoms):
     prompt = f"Act like a smart health bot. Suggest possible conditions based on: {symptoms}"
-    return ask_gemini(prompt)
-
+    return call_gemini_api(prompt)
 
 # 🌍 Translator
 def translate_medical(text, lang="en"):
     prompt = f"Translate this medical text into {lang}: {text}"
-    return ask_gemini(prompt)
-
+    return call_gemini_api(prompt)
 
 # 📚 Topic Summary
 def generate_summary(topic):
     prompt = f"Summarize the topic: {topic} in simple words for students."
-    return ask_gemini(prompt)
-
+    return call_gemini_api(prompt)
 
 # 📝 Quiz Generator
 def generate_quiz(topic):
     prompt = f"Generate 3 quiz questions based on the topic: {topic}. Include answers."
-    return ask_gemini(prompt)
-
+    return call_gemini_api(prompt)
 
 # 🛡️ VirusTotal Scanner (URL/Email)
 def scan_virustotal(input_data):
@@ -85,7 +77,6 @@ def scan_virustotal(input_data):
 
     except Exception as e:
         return f"[VT Error] {str(e)}"
-
 
 # 🌐 Language Map
 def map_language_code(lang):
