@@ -1,7 +1,7 @@
 # backend/routes/health.py
 from fastapi import APIRouter, Request
 from utils.helpers import analyze_symptoms, translate_medical_text
-from utils.audio import voice_to_text
+#from utils.audio import voice_to_text
 
 router = APIRouter()
 
