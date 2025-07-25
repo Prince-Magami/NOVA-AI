@@ -1,7 +1,7 @@
 # backend/routes/finance.py
 from fastapi import APIRouter, Request
 from utils.helpers import generate_budget_plan, suggest_careers
-from utils.audio import voice_to_text
+#from utils.audio import voice_to_text
 
 router = APIRouter()
 
