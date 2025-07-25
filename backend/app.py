@@ -1,5 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from utils.helpers import call_gemini_api  
 
 from routes.chat import router as chat_router
 from routes.edu import router as edu_router
