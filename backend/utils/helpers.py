@@ -87,3 +87,6 @@ def map_language_code(lang):
         "Igbo": "ig",
         "Yoruba": "yo"
     }.get(lang, "en")
+
+fetch_summary = generate_summary
+scan_link_with_virustotal = scan_virustotal
