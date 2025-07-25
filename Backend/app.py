@@ -3,8 +3,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
-
-from routes import chat, finance, health, education, language
+from backend.routes import chat, finance, health, education, language
 
 load_dotenv()
 
