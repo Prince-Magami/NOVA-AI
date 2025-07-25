@@ -1,6 +1,6 @@
 # backend/routes/chat.py
 from fastapi import APIRouter, Request
-from utils.helpers import call_gemini_api
+#from utils.helpers import call_gemini_api
 
 router = APIRouter()
 
